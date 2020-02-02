@@ -59,7 +59,7 @@ def encode(train, validate):
     return train, validate
 
 
-def train_model(train, model=Model.DECISION_TREE, seed=None):
+def train_model(train, model=Model.RANDOM_FOREST, seed=None):
     print("Training model using regressor: {}".format(model.name))
     train_dropped = train.drop('unit_sales', axis=1)
     target = train['unit_sales']

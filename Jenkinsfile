@@ -1,10 +1,14 @@
 pipeline {
-    agent any
-
+    agent {
+        docker { 
+            image 'python:3.7-slim' 
+        }
+    }
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Starting Build'
+                sh 'dvc pull model.pkl.dvc'
             }
         }
         stage('Test') {

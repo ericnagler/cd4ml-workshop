@@ -1,13 +1,9 @@
 pipeline {
-    agent {
-        docker { 
-            image 'python:3.7-slim' 
-        }
-    }
     stages {
         stage('Build') {
             steps {
                 echo 'Starting Build'
+                sh 'pip3 install -r requirements.txt'
                 sh 'dvc pull model.pkl.dvc'
             }
         }

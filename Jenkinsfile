@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Starting Build'
                 sh 'pip3 install -r requirements.txt'
-                sh 'dvc pull model.pkl.dvc'
+                sh 'dvc repro model.pkl.dvc'
             }
         }
         stage('Test') {

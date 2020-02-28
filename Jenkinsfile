@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'curl --request POST --data-binary "@data/decision_tree/model.pkl" http://model.docker:5006/replacemodel'
             }
         }
     }

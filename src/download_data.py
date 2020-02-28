@@ -18,13 +18,15 @@ def main():
     parser.add_argument('--model', action='store_true', default=False, help='Downloads model (data/decision_tree/model.pkl) instead of input file (data/raw/store47-2016.csv)')
     args = parser.parse_args()
 
-    if args.model:
-        print("Loading model...")
-        load_data(path='data/decision_tree', key='model.pkl')
-    else:
-        print("Loading input data...")
-        load_data(path='data/raw', key='store47-2016.csv')
-    print("Finished downloading")
+
+
+    # if args.model:
+    #     print("Loading model...")
+    #     load_data(path='data/decision_tree', key='model.pkl')
+    # else:
+    #     print("Loading input data...")
+    #     load_data(path='data/raw', key='store47-2016.csv')
+    print("Finished download data")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
-md5: 103aaf82dfc47ff9b715880b06f0a593
+md5: f7abf6b9b0f89362db208a9074c4f252
 cmd: python src/download_data.py
 deps:
-- md5: 28520f86aef45fa851067a351f299375
+- md5: 32a6a3f2a96e2a75b347c071666ea104
   path: src/download_data.py
 outs:
 - md5: a269ea06e07424957949abb6172578f8

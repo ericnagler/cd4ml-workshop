@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting Build'
-                sh 'mkdir -p src/raw/'
+                sh 'mkdir -p data/raw/'
                 sh 'pip3 install -r requirements.txt'
                 sh 'dvc repro model.pkl.dvc'
             }

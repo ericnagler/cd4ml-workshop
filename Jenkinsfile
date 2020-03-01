@@ -12,9 +12,9 @@ pipeline {
                 sh 'dvc repro model.pkl.dvc'
             }
         }
-        stage('Test') {
+        stage('Evaluate') {
             steps {
-                echo 'Testing..'
+                sh 'python3 test/test.py'
             }
         }
         stage('Deploy') {

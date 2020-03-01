@@ -29,5 +29,8 @@ class track:
 
     def log_metrics(self, metrics):
         if USE_MLFLOW:
+            print("Writing to MLFLOW")
             for metric in metrics:
                 mlflow.log_metric(metric, metrics[metric])
+        else:
+            print("Not Writing to MLFLOW")

@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment { 
-        MLFLOW_TRACKING_URL = 'mlflow'
+        MLFLOW_TRACKING_URL = 'http://mlflow:5000'
     }
     stages {
         stage('Build') {
